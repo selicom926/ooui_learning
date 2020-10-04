@@ -4,7 +4,9 @@
   "description": "Learn the book \"Programming typescript\"",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "node_modules/.bin/tsc",
+    "start": "node dist/index.js"
   },
   "author": "",
   "license": "ISC",
