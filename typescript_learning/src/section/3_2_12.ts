@@ -14,7 +14,11 @@ function createPizza(type: string): Pizza {
             addVegies: () => {}
         }
     } else {
-        return null;
+        //return null; // null is not Pizza
+        return {
+            addAnchovies: () => {},
+            addVegies: () => {}
+        }
     }
 }
 
