@@ -43,11 +43,13 @@ export default class MemoCollection extends React.Component<IMemoCollectionProps
         return (
             <div className="App">
                 <input type="text" onChange={this.onChangeSearchKey}></input>
+                <ul>
                 {
                     this.state.filteredMemos.map((memo: Memo) => {
-                        return <div>{memo.title}</div>
+                        return <li>{memo.title}</li>
                     })
                 }
+                </ul>
             </div>
         );
     }
