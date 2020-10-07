@@ -6,6 +6,14 @@ export default function() : void{
             .reduce((total, n) => total + n, 0);
     }
 
+    /**
+     * 注意したいのが、Array<number>で型づけしてもnumber[]と同じということ
+     * @param numbers 
+     */
+    function sumVariadicSafe(...numbers: Array<number>): number {
+        return numbers.reduce((total, n) => total + n, 0);
+    }
+
     function sumVariadicWithType(a: {x: number}, b: {x: number}, c: {x: number}): number {
         return Array
             .from(arguments)
@@ -29,4 +37,8 @@ export default function() : void{
      * typscriptの意味なし
      */
     console.log(sumVariadicWithType({x: 1}, {x: 2}, {x: 3}));
+    console.log(sumVariadicSafe(1, 2, 3));
+
+
+
 }
