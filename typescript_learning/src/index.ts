@@ -1,4 +1,4 @@
-import test from './section/4_5';
+import test from './section/5_5';
 
 // Type test
 type A = unknown;
