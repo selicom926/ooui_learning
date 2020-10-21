@@ -108,6 +108,7 @@ interface BuildableRequest {
 /**
  * 回答　pickってなんだ？？
  * オブジェクトから一部のみ抜き出した別のオブジェクトを作成する
+ * どういうことか自分なりに実装して確認する
  */
 class Reqbuilder {
     data?: object
@@ -131,6 +132,10 @@ class Reqbuilder {
     }
 }
 
+/**
+ * 自分なりの実装
+ * つまるところ、関数の認識するthisを引数でbindできる（コンパイルエラーになる）
+ */
 interface Data {data?: object}
 interface Method {method: 'get' | 'post'}
 interface Url {url: string}
